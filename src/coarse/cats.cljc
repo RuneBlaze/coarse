@@ -1,4 +1,4 @@
-(ns coarse.cats)
+(ns ^:no-doc coarse.cats)
 
 (defn pure [x]
   [:pure x x])
@@ -169,3 +169,10 @@
   [f {:keys [value]}]
   (let [[a b] value]
     (mk-tuple a (f b))))
+
+(defn pure-from [t ele]
+  (case t
+    :const (mk-const [])
+    :identity (mk-identity ele)
+    :first (mk-first (just ele))
+    (pure ele)))

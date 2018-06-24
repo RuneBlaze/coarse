@@ -19,9 +19,9 @@
   (testing "attr variants"
     (let [v {:a [:b :c] :h [:d [:e :f]]}]
       (is (= (assoc-in v [:h 1 0] 10)
-             (sett (§ :h _2 _1) 10 v)
-             (sett (§ :h 1 0) 10 v)
-             (over (§ :h 1 0) (constantly 10) v))))))
+             (sett (*> :h _2 _1) 10 v)
+             (sett (*> :h 1 0) 10 v)
+             (over (*> :h 1 0) (constantly 10) v))))))
 
 (deftest small-helpers
   (testing "to works"
@@ -36,14 +36,14 @@
 (deftest maths-operators
   (testing "all-maths-operators"
     (let [v [0 1 2 3 4 5]]
-      (is (= (+% (_index even?) 3 v)
+      (is (= (+= (_index even?) 3 v)
              [3 1 5 3 7 5]))
-      (is (= (-% (_taking 2) 10 v)
+      (is (= (-= (_taking 2) 10 v)
              [-10 -9 2 3 4 5]))
-      (is (= (*% _last -1 v)
+      (is (= (*= _last -1 v)
              [0 1 2 3 4 -5]))
-      (is (= (quot% (_filtering even?) 2 v)
-             (div% (_filtering even?) 2 v)
+      (is (= (quot= (_filtering even?) 2 v)
+             (div= (_filtering even?) 2 v)
              [0 1 1 3 2 5])))))
 
 (deftest join-simple
@@ -70,8 +70,8 @@
 
 (def move-right-then-up
   (lens-do
-    (+= (*> :pos :x) 1)
-    (-= (*> :pos :y) 1)))
+    (+== (*> :pos :x) 1)
+    (-== (*> :pos :y) 1)))
 
 (deftest state-manipulations
   (testing "basic state setters"
