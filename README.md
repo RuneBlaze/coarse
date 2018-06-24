@@ -71,8 +71,8 @@ changes.
   
 (->> game-state
   (+>> (*> :player :pos)
-    (+= x 1)
-    (+= y 1)))
+    (+= :x 1)
+    (+= :y 1)))
 ; {:player {:pos {:x 1 :y 1}} :hp 100 :inventory []}
 ```
 
