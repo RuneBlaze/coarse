@@ -1,6 +1,6 @@
 (defproject coarse "0.1.0-SNAPSHOT"
   :description "Clojure lens library, implements a small subset of ekmett's lens"
-  :url "http://example.com/FIXME"
+  :url "http://github.com/RuneBlaze/coarse"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.8.0"]]

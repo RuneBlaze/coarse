@@ -17,7 +17,16 @@ To install, add the following dependency to your project or build file:
 (println (view (ix 3) [1 2 3 4 5]))
 ```
 
-See the interactive guide for more in depth information.
+See the [interactive guide](https://coarse-docs.netlify.com/) for more in depth information.
+
+## Stability
+
+While this library has been tested, do expect possible
+bugs. I feel this library is stable for use in toy projects,
+so obviously do not use this in production.
+
+I will adhere to semver whenever possible, but expect breaking
+changes.
 
 ## Examples
 
