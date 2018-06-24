@@ -76,6 +76,19 @@ changes.
 ; {:player {:pos {:x 1 :y 1}} :hp 100 :inventory []}
 ```
 
+## See Also
+
+
+### [specter](https://github.com/nathanmarz/specter) 
+
+Specter solves the same problem, but it is much more mature and stable. Use specter if you are interested in getting things done. Use this library if you are interested in toying with Haskell concepts.
+
+### [traversy](https://github.com/ctford/traversy) 
+
+Traversy is similar in nature, with a better encoding of lens, but fewer features than this library. This library is also closer to the original Haskell implementation.
+
+Also I borrowed the ```*>``` notation from traversy.
+
 ## License
 
 Copyright © 2018 RuneBlaze
