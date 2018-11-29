@@ -76,6 +76,13 @@ changes.
 ; {:player {:pos {:x 1 :y 1}} :hp 100 :inventory []}
 ```
 
+## Implementation
+
+In hindsight, there was no apparent reason for me to use the van Laarhoven encoding for this library (aside from acting as a partial
+reimplementation for micro-lens). I still believe the current encoding is better than the naive encoding (as a struct with a
+function get and set), but I will try to explore more "clojure-ish" encodings of functional lenses. Currently the usages of
+pseudo-typeclasses in the code are like paper-cuts that really annoys me.
+
 ## See Also
 
 
